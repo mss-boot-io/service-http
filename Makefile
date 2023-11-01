@@ -10,3 +10,5 @@ run:
 	go run main.go server
 migrate:
 	go run main.go migrate
+generate:
+	go generate ./...

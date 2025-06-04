@@ -64,6 +64,7 @@ func migrate() error {
 		slog.Error("auto migrate error", slog.Any("err", err))
 		return err
 	}
+	migration.Migrate.SetModel(&models.Migration{})
 	migration.Migrate.SetDb(db)
 	migration.Migrate.Migrate()
 	return err

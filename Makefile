@@ -12,3 +12,5 @@ migrate:
 	go run main.go migrate
 generate:
 	go generate ./...
+check:
+	CGO_ENABLED=0 go build -o application main.go
